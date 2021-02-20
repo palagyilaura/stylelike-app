@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  background-color: #eae9eb;
+  min-height: 100vh;
+}
+.wrapper {
+  margin: 0 40px;
+}
+#dashboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.campaign-btn {
+  background-color: #f60051;
+  border: 1px solid #e6004c;
+  border-radius: 3px;
+  padding: 9px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  color: white;
+}
+.title {
+  font-size: 18px;
+  color: #484848;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.boxes {
+  display: flex;
+  flex-direction: row;
+}
+.body-content {
+  display: flex;
+  flex-direction: row;
+}
