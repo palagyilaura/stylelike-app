@@ -56,3 +56,9 @@ hr {
   margin: 5px;
   border: 1px solid #d9d9d9;
 }
+@media only screen and (max-width: 600px) {
+  #influencers {
+    width: 100%;
+    margin: 0;
+  }
+}

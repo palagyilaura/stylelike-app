@@ -10,6 +10,7 @@ function Todos() {
     <section id="todos">
       <h2 className="todos-title">My to do's (3)</h2>
       <div className="todos-body">
+        <div className="overlay-shadow"></div>
         <div className="todos-container">
           <div className="todo">
             <div className="todo-header">
@@ -100,7 +101,6 @@ function Todos() {
             </div>
           </div>
         </div>
-        <div className="overlay-shadow"></div>
       </div>
     </section>
   );

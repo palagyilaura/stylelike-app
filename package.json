@@ -12,8 +12,10 @@
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.2",
+    "twit": "^2.2.11",
     "web-vitals": "^1.1.0"
   },
+  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

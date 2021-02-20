@@ -21,7 +21,6 @@ h2 {
   align-items: center;
 }
 .status-name {
-  font-size: 11px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -33,21 +32,20 @@ h2 {
   padding: 0 4px;
 }
 .status-day {
-  font-size: 10px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: #8d8d8d;
 }
 .influencer-number {
   color: #f60051;
-  font-size: 12px;
+
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
 .campaign-name {
   color: #484848;
-  font-size: 16px;
+
   font-family: "Lato", sans-serif;
   font-weight: 300;
   line-height: 18px;
@@ -81,14 +79,12 @@ h2 {
 
 .column .number {
   color: #f60051;
-  font-size: 18px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-align: center;
 }
 .column .text {
   color: #8d8d8d;
-  font-size: 8px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -103,4 +99,72 @@ h2 {
   position: absolute;
   top: 20px;
   left: 80px;
+}
+@media only screen and (min-width: 501px) {
+  .status-name {
+    font-size: 11px;
+  }
+  .status-day {
+    font-size: 10px;
+  }
+  .influencer-number {
+    font-size: 12px;
+  }
+  .campaign-name {
+    font-size: 16px;
+  }
+
+  .column .number {
+    font-size: 18px;
+  }
+  .column .text {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .status-name {
+    font-size: 9px;
+  }
+  .status-day {
+    font-size: 8px;
+  }
+  .influencer-number {
+    font-size: 10px;
+  }
+  .campaign-name {
+    font-size: 11px;
+  }
+  .column .number {
+    font-size: 12px;
+  }
+  .column .text {
+    font-size: 6px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .status-name {
+    font-size: 7px;
+  }
+  .status-day {
+    font-size: 6px;
+  }
+  .influencer-number {
+    font-size: 7px;
+    margin-top: 3px;
+  }
+  .campaign-name {
+    font-size: 9px;
+    line-height: 11px !important;
+  }
+  .column .number {
+    font-size: 8px;
+  }
+  .column .text {
+    font-size: 4px;
+  }
+  .text svg {
+    height: 5px;
+    margin-right: 1px;
+  }
 }

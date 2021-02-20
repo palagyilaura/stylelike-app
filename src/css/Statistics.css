@@ -63,7 +63,7 @@ h3 {
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
-  width: 120px;
+  width: 140px;
   text-align: center;
 }
 .border {
@@ -104,12 +104,46 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border-radius: 4px;
   margin: 15px 2px 0px 2px;
 }
-.btn-column {
-  padding: 0 10px 0 0;
-}
+
 .graphic-buttons {
   margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  #statistics {
+    width: 100%;
+  }
+  .graphic-btn {
+    width: 160px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .graphic-btn {
+    font-size: 13px;
+    width: 110px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .graphic-btn {
+    width: 120px;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .graphic-btn {
+    width: 120px;
+  }
+}
+@media only screen and (min-width: 978px) {
+  .graphic-btn {
+    width: 135px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .graphic-btn {
+    width: 170px;
+  }
 }

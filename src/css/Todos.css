@@ -1,8 +1,3 @@
-#todos {
-  /* max-width: 320px;*/
-  width: 30%;
-  margin-left: 21px;
-}
 .todos-title {
   font-size: 16px;
   font-family: "Lato", sans-serif;
@@ -20,30 +15,33 @@
   font-weight: 400;
   color: #484848;
 }
-/*
+
 .todos-body {
   height: 650px;
-  /*position: relative;*/
-/*margin: 0em;
-  overflow-y: auto;
-  background-color: #d8d8d8;
-}*/
+  position: relative;
+  width: 100%;
+}
+
 .todos-container {
   padding: 10px;
   height: 650px;
-  /*position: relative;*/
-  /*margin: 0em;*/
+  position: relative;
+
   overflow-y: auto;
   background-color: #d8d8d8;
 }
 .overlay-shadow {
+  background: linear-gradient(
+    0deg,
+    rgba(139, 139, 139, 1) 0%,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 76px;
   z-index: 100;
+  width: inherit;
+  bottom: 0;
   position: absolute;
-  box-shadow: 0px 10px 100px -10px #000 inset;
-
-  height: 20px;
-  margin-bottom: -20px;
-  margin-right: 15px;
 }
 .todo {
   margin-bottom: 10px;
@@ -143,4 +141,26 @@
   /**box-shadow: 0px 0px 0px 1px #d9d9d9 inset;*/
   margin: 5px;
   border: 1px solid #d9d9d9;
+}
+@media only screen and (max-width: 600px) {
+  #todos {
+    width: 100%;
+    margin: 0;
+  }
+  .todos-title {
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  #todos {
+    /* max-width: 320px;*/
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 850px) {
+  #todos {
+    /* max-width: 320px;*/
+    width: 30%;
+    margin-left: 21px;
+  }
 }

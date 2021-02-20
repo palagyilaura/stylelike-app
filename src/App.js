@@ -4,6 +4,7 @@ import Campaigns from "./components/Campaigns";
 import Statistics from "./components/Statistics";
 import Influencers from "./components/Influencers";
 import Todos from "./components/Todos";
+import Tweets from "./components/Tweets";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </div>
           <Todos />
         </div>
+        <Tweets />
       </div>
     </div>
   );
