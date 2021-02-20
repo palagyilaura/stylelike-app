@@ -42,3 +42,6 @@
   display: flex;
   flex-direction: row;
 }
+.body-1 {
+  width: 70%;
+}

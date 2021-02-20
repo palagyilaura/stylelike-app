@@ -15,7 +15,7 @@ function App() {
           <button className="campaign-btn">Create a new campaign</button>
         </section>
         <div className="body-content">
-          <div>
+          <div className="body-1">
             <Campaigns />
             <div className="boxes">
               <Statistics />
