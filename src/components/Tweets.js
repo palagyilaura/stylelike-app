@@ -29,17 +29,17 @@ function Tweets() {
           }
         }
         setTweets(arr);
-        console.log(tweets);
+        //console.log(tweets);
 
       }
     };
     xhr.open("GET", url, true);
 
-    xhr.timeout = 4000;
+    /*xhr.timeout = 5000;
 
     xhr.ontimeout = function () {
       console.log("Timed out!!!");
-    };
+    };*/
 
     xhr.send();
 
@@ -52,8 +52,9 @@ function Tweets() {
       <h2 className="tweets-title">
         Tweets with the <p className="pink">#UX</p> hashtag
       </h2>
-      <div className="tweets-body">
-        <div className="tweets">
+      <div className="tweets">
+        <div className="tweets-body">
+
           <ul>
             {tweets.length !== 0 ? (
               tweets.map((tweet, i) => (
