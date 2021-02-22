@@ -17,18 +17,18 @@
 }
 
 .todos-body {
-  height: 650px;
+  height: 644px;
   position: relative;
   width: 100%;
+
+  background-color: #d8d8d8;
 }
 
 .todos-container {
   padding: 10px;
-  height: 650px;
+  height: 100%;
   position: relative;
-
   overflow-y: auto;
-  background-color: #d8d8d8;
 }
 .overlay-shadow {
   background: linear-gradient(
@@ -108,12 +108,14 @@
 .todo-text-col {
   display: flex;
   flex-direction: column;
+  margin-right: 15px;
 }
 .followers {
   text-transform: uppercase;
   font-size: 8px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
+  width: 48px;
 }
 .followers-num {
   font-size: 14px;
@@ -138,7 +140,6 @@
   text-align: center;
   color: #f60051;
   background-color: transparent;
-  /**box-shadow: 0px 0px 0px 1px #d9d9d9 inset;*/
   margin: 5px;
   border: 1px solid #d9d9d9;
 }
@@ -153,14 +154,13 @@
 }
 @media only screen and (min-width: 601px) {
   #todos {
-    /* max-width: 320px;*/
     width: 50%;
+    margin: 20px auto;
   }
 }
 @media only screen and (min-width: 850px) {
   #todos {
-    /* max-width: 320px;*/
     width: 30%;
-    margin-left: 21px;
+    margin: 0 0 0 21px;
   }
 }

@@ -5,13 +5,13 @@ import { useState } from "react";
 
 function Header() {
   const [active, setActive] = useState("false");
-  console.log(active);
+
   const handleClick = () => {
     setActive(!active);
 
   };
   const [drop, setDrop] = useState("false");
-  console.log(drop);
+
   const dropDown = () => {
     setDrop(!drop);
 
@@ -114,7 +114,7 @@ function Header() {
             </a>
           </li>
         </ul>
-        {/*Mobil menü*/}
+        {/*Mobile menu*/}
         <div className="burger" onClick={handleClick}>
           <div className="line1"></div>
           <div className="line2"></div>

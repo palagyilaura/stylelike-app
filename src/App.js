@@ -24,13 +24,14 @@ function App() {
             </div>
           </div>
           <Todos />
+
         </div>
-        <Tweets />
+        <div className="body-content2">
+          <Tweets />
+        </div>
       </div>
     </div>
   );
 }
-
-//https://uxstudioteam.com/development/fedc/twitter-data.json
 
 export default App;

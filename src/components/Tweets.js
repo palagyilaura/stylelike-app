@@ -3,85 +3,73 @@ import "../css/Tweets.css";
 import { useState, useEffect } from "react";
 
 function Tweets() {
-  const [error, setError] = useState(null);
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [tweets, setTweets] = useState([]);
 
-  let headers = new Headers();
+  const arr = [];
 
-  headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "http://localhost:3000/");
-  headers.append("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT");
-
-  /*
-  fetch({
-    mode: "cors",
-    credentials: "include",
-    method: "POST",
-    headers: headers,
-  })
-    .then((response) => response.json())
-    .then((json) => console.log(json))
-    .catch((error) => console.log("Authorization failed : " + error.message));*/
-  /*
-  const xhr = new XMLHttpRequest();
+  //http://cors-anywhere.herokuapp.com/corsdemo  - enable cors!!
   const url =
-    "https://uxstudioteam.com/development/fedc/twitter-data.json?q=%23ux&result_type=recent";
-
-  xhr.open("GET", url);
-  xhr.onreadystatechange = () => {
-    if (this.readyState == 4 && this.status == 200) {
-      console.log(this.responseText);
-    }
-  };
-  xhr.send();*/
-
+    "https://cors-anywhere.herokuapp.com/https://uxstudioteam.com/development/fedc/twitter-data.json?";
   useEffect(() => {
-    fetch(
-      "https://uxstudioteam.com/development/fedc/twitter-data.json?q=%23ux&result_type=recent",
-      {
-        headers: headers,
-      }
-    )
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          console.log(result);
-          setTweets(result);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        setIsLoaded(true);
+        const json = this.response;
+
+        for (let i = 0; i < json.statuses.length; i++) {
+          if (
+            json.statuses[i].text.search("#ux") !== -1 ||
+            json.statuses[i].text.search("#UX") !== -1
+          ) {
+            arr.push(json.statuses[i].text);
+          }
         }
-      );
-  }, []);
+        setTweets(arr);
+        console.log(tweets);
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (!isLoaded) {
-    return <div>Loading...</div>;
-  } else {
-    return (
-      <ul>
-        {tweets.map((tweet) => (
-          <li key={tweet.id}>{tweet.name}</li>
-        ))}
-      </ul>
-    );
-  }
+      }
+    };
+    xhr.open("GET", url, true);
 
+    xhr.timeout = 4000;
+
+    xhr.ontimeout = function () {
+      console.log("Timed out!!!");
+    };
+
+    xhr.send();
+
+
+  }, [
+    tweets,
+  ]);
   return (
     <section id="tweets">
-      <h2 className="tweets-title">Tweets with the #UX hashtag</h2>
+      <h2 className="tweets-title">
+        Tweets with the <p className="pink">#UX</p> hashtag
+      </h2>
       <div className="tweets-body">
-        <div className="tweets"></div>
+        <div className="tweets">
+          <ul>
+            {tweets.length !== 0 ? (
+              tweets.map((tweet, i) => (
+                <li className="tweet-row" key={i}>
+                  {tweet}
+                </li>
+              ))
+            ) : (
+                <li className="tweet-row">Loading...</li>
+              )}
+          </ul>
+        </div>
       </div>
     </section>
   );
+
 }
 
 export default Tweets;

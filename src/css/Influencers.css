@@ -8,12 +8,12 @@
   font-family: "Lato", sans-serif;
   font-weight: 300;
   line-height: 18px;
-  margin: 20px 0 10px 0;
+  margin: 10px 0 10px 0;
   color: #484848;
 }
 .infl-container {
   background-color: white;
-  min-height: 320px;
+  max-height: 354px;
 }
 hr {
   border: 1px solid #d9d9d9;
@@ -24,6 +24,7 @@ hr {
   justify-content: space-around;
   padding: 10px;
   align-items: center;
+  height: 70px;
 }
 .infl-row img {
   margin-right: 5px;

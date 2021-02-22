@@ -3,19 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-.app {
+html {
   background-color: #eae9eb;
+}
+.app {
   min-height: 100vh;
 }
 .wrapper {
   margin: 0 auto;
-  max-width: 950px;
-}
-@media only screen and (min-width: 1024px) {
-  .wrapper {
-    margin: 0 auto;
-    max-width: 95%;
-  }
 }
 
 .campaign-btn {
@@ -36,10 +31,14 @@
   margin-right: 10px;
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 851px) {
   .body-content {
     display: flex;
     flex-direction: row;
+    padding: 0 40px;
+  }
+  .body-content2 {
+    padding: 0 40px;
   }
   .body-1 {
     width: 70%;
@@ -48,6 +47,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0 40px;
   }
   .boxes {
     display: flex;
@@ -62,8 +62,14 @@
     font-size: 18px;
   }
 }
+
 @media only screen and (max-width: 850px) {
   .body-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+  }
+  .body-content2 {
     display: flex;
     flex-direction: column;
     padding: 0 40px;
@@ -97,6 +103,11 @@
     flex-direction: column;
   }
   .body-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .body-content2 {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
